@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">List Club</string>
+    <string name="club_name">Arsenal FC</string>
+    <string name="coach">Pelatih</string>
+    <string name="separator">:</string>
+    <string name="coach_name">Mikel Arteta</string>
+    <string name="nickname">Julukan</string>
+    <string name="separator">:</string>
+    <string name="nickname_name">the Gunners</string>
+    <string name="established">Didirikan</string>
+    <string name="established_date">Oktober 1886</string>
+    <string name="stadium">Stadion</string>
+    <string name="stadium_name">Emirates Stadium</string>
+    <string name="description">Arsenal adalah klub pertama dari Inggris Selatan yang bergabung dengan Football League pada tahun 1893, dan mereka mencapai Divisi Pertama pada tahun 1904. Terdegradasi hanya sekali, pada tahun 1913, mereka melanjutkan rekor terpanjang di divisi teratas, dan telah memenangkan gelar kedua. pertandingan papan atas dalam sejarah sepak bola Inggris.</string>
+</resources>
