@@ -1,7 +1,7 @@
 package com.dicoding.listclub
 
 class dtClub {
-    private val listClub = listOf(
+    private val listClubName = listOf(
         "The Arsenal Football Club",
         "Aston Villa Football Club",
         "Chelsea Football Club",
@@ -76,7 +76,7 @@ class dtClub {
         "Craven Cottage",
         "St Mary's Stadium"
     )
-    private val description = listOf(
+    private val listDescription = listOf(
         "Arsenal adalah klub pertama dari Inggris Selatan yang bergabung dengan Football League pada tahun 1893, dan mereka mencapai Divisi Pertama pada tahun 1904. Terdegradasi hanya sekali, pada tahun 1913, mereka melanjutkan rekor terpanjang di divisi teratas, dan telah memenangkan gelar kedua.",
         "Aston Villa Football Club dibentuk pada Maret 1874, oleh anggota Villa Cross Wesleyan Chapel di Handsworth yang sekarang menjadi bagian dari Birmingham. Villa adalah salah satu anggota pendiri Liga Premier pada tahun 1992, menjadi salah satu dari hanya tiga klub yang telah menjadi anggota pendiri Liga Sepak Bola pada tahun 1888 dan Liga Premier, bersama dengan Blackburn Rovers dan Everton.",
         "Chelsea hanya memiliki satu kandang, Stamford Bridge, tempat mereka bermain sejak berdirinya tim. Stadion ini resmi dibuka pada 28 April 1877 dan selama 28 tahun berikutnya digunakan oleh London Athletic Club sebagai arena pertemuan atletik. Stamford Bridge mengalami banyak renovasi terutama penambahan kompleks perhotelan. Stamford Bridge mampu menampung 40.834 penonton dalam sekali tanding.",
@@ -88,4 +88,25 @@ class dtClub {
         "Fulham Football Club (FFC) atau yang biasa disebut sebagai Fulham merupakan tim sepakbola yang berbasis di Fulham, London. Club ini didirikan pada 1879, dan tahun ini club ini merayakan ulang tahun ke 126 tahunnya. FFC yang bermula sebagai tim sepakbola sekolah minggu dengan nama Fulham St. Andrew's ini mendapat status tim profesional pada 12 Desember 1898.",
         "Southampton Football Club adalah klub sepak bola profesional Inggris yang berbasis di Southampton, Hampshire, yang bermain di Liga Premier sepak bola Inggris. Salah satu anggota pendiri Liga Premier, mereka telah menghabiskan sebagian besar sejarah mereka di papan atas sejak promosi pertama mereka pada tahun 1966."
     )
+
+      fun getClub() : ArrayList<Club>{
+        val listClub = ArrayList<Club>()
+
+        for(position in listClubName.indices){
+            val club = Club(
+                clubName = listClubName[position],
+                coach = listCoach[position],
+                stadium = listStadium[position],
+                established = listEstablished[position],
+                nickName = listNickname[position],
+                description = listDescription[position],
+                poster = listPoster[position]
+
+            )
+
+            listClub.add(club)
+        }
+        return listClub
+    }
+
 }
