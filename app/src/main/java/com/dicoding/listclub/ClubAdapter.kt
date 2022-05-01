@@ -23,6 +23,7 @@ class ClubAdapter (
     inner class MyViewHolder (
         private val bindingItem : ItemClubBinding
         ): RecyclerView.ViewHolder(bindingItem.root){
+
             fun bindData(club:Club){
                 with(bindingItem){
                     tvClubName.text = club.clubName
@@ -30,8 +31,15 @@ class ClubAdapter (
                     tvStadium.text = club.stadium
                     tvNickname.text = club.nickName
                     tvEstablished.text = club.established
-                    ivPoster.setImageResource(club.poster)
+                    ivPoster.setImageDrawable(context.getDrawable(club.poster))
+
+                    root.setOnClickListener {
+                        clickUseCase.onClickItemCallback(club)
+                    }
+
                 }
+
+
             }
         }
 
