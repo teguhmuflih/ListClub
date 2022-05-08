@@ -100,13 +100,29 @@ class dtClub {
                 established = listEstablished[position],
                 nickName = listNickname[position],
                 description = listDescription[position],
-                poster = listPoster[position]
-
+                poster = listPoster[position],
+                player = getPlayer(position+1)
             )
 
             listClub.add(club)
         }
         return listClub
+    }
+
+    private fun getPlayer(position:Int): ArrayList<ClubPlayer>{
+        return when(position){
+            1 -> dtPlayer.arsenalPlayer
+            2 -> dtPlayer.astonvillaPlayer
+            3 -> dtPlayer.chelseaPlayer
+            4 -> dtPlayer.liverpoolPlayer
+            5 -> dtPlayer.cityPlayer
+            6 -> dtPlayer.muPlayer
+            7 -> dtPlayer.tottenhamPlayer
+            8 -> dtPlayer.evertonPlayer
+            9 -> dtPlayer.fulhamPlayer
+            10 -> dtPlayer.southamptonPlayer
+            else -> ArrayList()
+        }
     }
 
 }

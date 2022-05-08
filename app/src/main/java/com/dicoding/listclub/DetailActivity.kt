@@ -3,6 +3,7 @@ package com.dicoding.listclub
 import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.listclub.databinding.ActivityDetailBinding
 
 class DetailActivity: AppCompatActivity() {
@@ -15,7 +16,14 @@ class DetailActivity: AppCompatActivity() {
         setContentView(binding.root)
 
         val clubData = intent.getParcelableExtra<Club>("club_data")
+        clubData?.let { setupRvPlayer(it.player) }
         fillingData(clubData)
+    }
+
+    private fun setupRvPlayer(clubPlayer: ArrayList<ClubPlayer>){
+        val adapter = PlayerAdapter(clubPlayer, applicationContext)
+        binding.rvPlayer.layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.HORIZONTAL, false)
+        binding.rvPlayer.adapter = adapter
     }
 
     private fun fillingData(clubData: Club?){
